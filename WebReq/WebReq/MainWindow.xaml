@@ -1,0 +1,72 @@
+﻿<Window x:Class="WebReq.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WebReq"
+        mc:Ignorable="d"
+        Title="Weather Forecast" Height="484.4" Width="1163.4" Loaded="Window_Loaded">
+    <Grid>
+        <TextBox x:Name="tbaddress" HorizontalAlignment="Left" Height="23" Margin="169,422,0,0" TextWrapping="Wrap" Text="http://api.openweathermap.org/data/2.5/forecast?lat=55.7&amp;lon=37.6&amp;appid=f4178279416bf1ce48d27736f5eb5255" VerticalAlignment="Top" Width="43"/>
+        <TextBox x:Name="tbresult" HorizontalAlignment="Left" Height="24" Margin="10,419,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62"/>
+        <Button Content="Отправить запрос HTTPClient" HorizontalAlignment="Left" Margin="92,419,0,0" VerticalAlignment="Top" Width="64" Height="24" Click="Button_Click_1"/>
+        <StackPanel Margin="0,0,0.4,10.4" Orientation="Horizontal" HorizontalAlignment="Center">
+
+            <GroupBox Header="Today&#xA;" Height="371" Width="260" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="33*"/>
+                        <ColumnDefinition Width="215*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="t_dt" Content="Date" HorizontalAlignment="Left" Margin="10,13,0,0" VerticalAlignment="Top" Height="32" Width="96" Grid.ColumnSpan="2" FontSize="16"/>
+                    <Image x:Name="t_img" HorizontalAlignment="Left" Height="100" Margin="41.8,108,0,0" VerticalAlignment="Top" Width="100" Source="Res/01n@2x.png" Grid.Column="1"/>
+                    <Label x:Name="t_des" Content="Description" HorizontalAlignment="Left" Margin="29.2,249,0,0" VerticalAlignment="Top" Height="38" Width="113" Grid.Column="1" FontSize="16"/>
+                    <Label x:Name="t_weekday" Content="Day of week" HorizontalAlignment="Left" Margin="94.2,13,0,0" VerticalAlignment="Top" Width="103" Grid.Column="1"/>
+
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="Tomorrow&#xA;" HorizontalAlignment="Left" Height="371"  VerticalAlignment="Top" Width="260" FontSize="16">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="33*"/>
+                        <ColumnDefinition Width="215*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="t_dt1" Content="Date" HorizontalAlignment="Left" Margin="10,13,0,0" VerticalAlignment="Top" Height="32" Width="102" Grid.ColumnSpan="2" FontSize="16"/>
+                    <Image x:Name="t_img1" HorizontalAlignment="Left" Height="100" Margin="41.8,108,0,0" VerticalAlignment="Top" Width="100" Source="Res/01n@2x.png" Grid.Column="1"/>
+                    <Label x:Name="t_des1" Content="Description" HorizontalAlignment="Left" Margin="42.2,246,0,0" VerticalAlignment="Top" Height="36" Width="114" Grid.Column="1" FontSize="16"/>
+                    <Label x:Name="t_weekday1" Content="Day of week" Grid.Column="1" HorizontalAlignment="Left" Margin="93.2,13,0,0" VerticalAlignment="Top" Width="103"/>
+
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="Day 3&#xA;" HorizontalAlignment="Left" Height="371"  VerticalAlignment="Top" Width="260" FontSize="16">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="33*"/>
+                        <ColumnDefinition Width="215*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="t_dt2" Content="Date" HorizontalAlignment="Left" Margin="10,13,0,0" VerticalAlignment="Top" Height="32" Width="101" Grid.ColumnSpan="2" FontSize="16"/>
+                    <Image x:Name="t_img2" HorizontalAlignment="Left" Height="100" Margin="41.8,108,0,0" VerticalAlignment="Top" Width="100" Source="Res/01n@2x.png" Grid.Column="1"/>
+                    <Label x:Name="t_des2" Content="Description" HorizontalAlignment="Left" Margin="42.2,246,0,0" VerticalAlignment="Top" Height="32" Width="109" Grid.Column="1" FontSize="16"/>
+                    <Label x:Name="t_weekday2" Content="Day of week" Grid.Column="1" HorizontalAlignment="Left" Margin="92.2,13,0,0" VerticalAlignment="Top" Width="103"/>
+
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="Day 4&#xA;" HorizontalAlignment="Left" Height="371"  VerticalAlignment="Top" Width="260" FontSize="16">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="33*"/>
+                        <ColumnDefinition Width="215*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="t_dt3" Content="Date" HorizontalAlignment="Left" Margin="10,13,0,0" VerticalAlignment="Top" Height="32" Width="107" Grid.ColumnSpan="2" FontSize="16"/>
+                    <Image x:Name="t_img3" HorizontalAlignment="Left" Height="100" Margin="41.8,108,0,0" VerticalAlignment="Top" Width="100" Source="Res/01n@2x.png" Grid.Column="1"/>
+                    <Label x:Name="t_des3" Content="Description" HorizontalAlignment="Left" Margin="42.2,243,0,0" VerticalAlignment="Top" Height="35" Width="115" Grid.Column="1" FontSize="16"/>
+                    <Label x:Name="t_weekday3" Content="Day of week" Grid.Column="1" HorizontalAlignment="Left" Margin="89.2,13,0,0" VerticalAlignment="Top" Width="103"/>
+
+                </Grid>
+            </GroupBox>
+
+        </StackPanel>
+
+
+    </Grid>
+</Window>
